@@ -31,8 +31,24 @@ namespace dru
 
 	void CPlayer::update()
 	{
-
 		CGameObj::update();
+
+		CTransform* tr = GetComponent<CTransform>();
+		Vector3 rotation = tr->GetRotation();
+		if (CInput::GetKeyDown(eKeyCode::Z))
+		{
+			rotation.x += 20.f * CTimeMgr::DeltaTime();
+		}
+		else if (CInput::GetKeyDown(eKeyCode::X))
+		{
+			rotation.y += 20.f * CTimeMgr::DeltaTime();
+		}
+		else if (CInput::GetKeyDown(eKeyCode::C))
+		{
+			rotation.z += 20.f * CTimeMgr::DeltaTime();
+		}
+
+		tr->SetRotation(rotation);
 	}
 
 	void CPlayer::fixedUpdate()

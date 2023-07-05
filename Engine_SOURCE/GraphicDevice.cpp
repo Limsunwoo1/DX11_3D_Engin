@@ -476,6 +476,11 @@ namespace dru::graphics
 		mContext->OMSetRenderTargets(1, mRenderTargetTexture->GetRTV().GetAddressOf(), mDepthStencilBufferTexture->GetDSV().Get());
 	}
 
+	void CGraphicDevice::OMSetRenderTarget()
+	{
+		mContext->OMSetRenderTargets(1, mRenderTargetTexture->GetRTV().GetAddressOf(), mDepthStencilBufferTexture->GetDSV().Get());
+	}
+
 	void CGraphicDevice::Draw()
 	{
 		mContext->Draw(0, 0);
