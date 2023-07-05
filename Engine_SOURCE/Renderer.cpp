@@ -329,6 +329,11 @@ namespace dru::renderer
 		cubMesh->CreateVertexBuffer(arrCube, 24);
 		cubMesh->CreateIndexBuffer(indexes.data(), indexes.size());
 #pragma endregion
+#pragma region Sphere
+		// ±¸ ¸Þ½¬
+
+
+#pragma endregion
 
 	}
 
