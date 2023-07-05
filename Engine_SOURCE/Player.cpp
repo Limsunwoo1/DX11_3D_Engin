@@ -9,8 +9,6 @@ namespace dru
 {
 	CPlayer::CPlayer()
 	{
-		SetLayerType(eLayerType::Player);
-		SetScale(Vector3(1.25f, 1.25f, 1.f));
 
 //		CRigidBody* rigidbody = this->AddComponent<CRigidBody>(eComponentType::RigidBody);
 
