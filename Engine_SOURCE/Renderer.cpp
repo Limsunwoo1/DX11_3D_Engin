@@ -325,13 +325,12 @@ namespace dru::renderer
 
 		// Crate Mesh
 		std::shared_ptr<CMesh> cubMesh = std::make_shared<CMesh>();
-		CResources::Insert<CMesh>(L"Cubemesh", cubMesh);
+		CResources::Insert<CMesh>(L"CubeMesh", cubMesh);
 		cubMesh->CreateVertexBuffer(arrCube, 24);
 		cubMesh->CreateIndexBuffer(indexes.data(), indexes.size());
 #pragma endregion
 #pragma region Sphere Mesh
 		// ±¸ ¸Þ½¬
-		//v = {};
 		Vertex v = {};
 		float fRadius = 0.5f;
 		std::vector<Vertex> sphereVtx;
@@ -362,6 +361,7 @@ namespace dru::renderer
 
 			for (UINT j = 0; j <= iSliceCount; ++j)
 			{
+				v = {};
 				float theta = j * fSliceAngle;
 
 				v.pos = Vector4(fRadius * sinf(i * fStackAngle) * cosf(j * fSliceAngle)
@@ -439,6 +439,7 @@ namespace dru::renderer
 		CResources::Insert<CMesh>(L"SphereMesh", sphereMesh);
 		sphereMesh->CreateVertexBuffer(sphereVtx.data(), sphereVtx.size());
 		sphereMesh->CreateIndexBuffer(indexes.data(), indexes.size());
+
 
 #pragma endregion
 

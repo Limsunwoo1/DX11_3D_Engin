@@ -78,8 +78,9 @@ namespace dru
 			player->SetPos(Vector3(0.0f, 0.0f, 10.0f));
 			player->SetName(L"Player");
 
-			player->GetComponent<CTransform>()->AddRotation(Vector3(15.f, 15.f, 0.0f));
+			//xplayer->GetComponent<CTransform>()->AddRotation(Vector3(15.f, 15.f, 0.0f));
 			player->GetComponent<CSpriteRenderer>()->SetMaterialByKey(L"BasicMaterial");
+			//std::shared_ptr<CMesh> mesh = CResources::Find<CMesh>(L"CubeMesh");
 			std::shared_ptr<CMesh> mesh = CResources::Find<CMesh>(L"SphereMesh");
 			player->GetComponent<CSpriteRenderer>()->SetMesh(mesh);
 		}
